@@ -1,0 +1,24 @@
+{
+  "name": "twitter-bot",
+  "version": "1.0.0",
+  "description": "twitter bot",
+  "main": "bot.js",
+  "dependencies": {
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start" : "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepsm/twitter-bot.git"
+  },
+  "author": "pepsm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepsm/twitter-bot/issues"
+  },
+  "homepage": "https://github.com/pepsm/twitter-bot#readme"
+}
