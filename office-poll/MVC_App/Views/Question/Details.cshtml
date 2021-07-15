@@ -1,0 +1,55 @@
+﻿@model MVC_App.Models.Administrator.ParentModel
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+
+<div>
+    <h4>QuestionModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Question.Question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question.Question)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Question.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question.Date)
+        </dd>
+
+        @foreach (var item in Model.AnswersCollection)
+        {
+
+                <dt>
+                    Answer
+                </dt>
+                <dd>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </dd>
+
+        }
+    </dl>
+
+</div>
+
+
+<div>
+    <img src="@Url.Action("CreateChart", new { id = Model.Question.id})" alt="SimpleCart" width="70%" height="20%" />
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Question.id }, new { @class = "btn btn-default" }) 
+    @Html.ActionLink("Export to CSV", "ExportContentToCSV", new { id = Model.Question.id }, new { @class = "btn btn-success" })
+</p>
+
+<br/>
+<div>
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" })
+</div>

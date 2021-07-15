@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Chart>
+	<Titles>
+    		<Title Name="Title1" Font="Trebuchet MS, 25pt, style=Bold">
+    		</Title>
+  	</Titles>
+    <ChartAreas>
+      
+      <ChartArea Name="Default" _Template_="All"
+                 BackGradientStyle="TopBottom"
+                 />
+     
+        <AxisY _Template_="All" Font="Trebuchet MS, 20pt, style=Bold">
+
+        </AxisY>
+        <AxisX>
+          <LabelStyle _Template_="All"
+                Font="Trebuchet MS, 20pt, style=Bold"/>
+        </AxisX>
+      
+    </ChartAreas>
+    <Legends>
+        <Legend _Template_="All"
+                Font="Trebuchet MS, 15pt, style=Bold"/>
+    </Legends>
+    
+</Chart>
+
+<!--<Chart BackColor="#D3DFF0" BackGradientStyle="TopBottom"
+       BackSecondaryColor="White" BorderColor="26, 59, 105"
+       BorderlineDashStyle="Solid" BorderWidth="2" Palette="BrightPastel">
+
+  <Titles>
+    <Title Name="Title1" ForeColor="DarkBlue"  Font="Comic Sans, 32pt, style=Italic">
+    </Title>
+  </Titles>
+  
+  <ChartAreas>
+    <ChartArea Name="Default" _Template_="All" BackColor="64, 165, 191, 228"
+               BackGradientStyle="TopBottom" BackSecondaryColor="White"
+               BorderColor="64, 64, 64, 64" BorderDashStyle="Solid"
+               ShadowColor="Transparent">
+      <AxisY>
+        <LabelStyle Font="Arial,
+                            15pt, style=Bold, Italic" />
+      </AxisY>
+      <AxisX>
+        <LabelStyle Font="Calibri,
+                            2pt, style=Bold" IsTextAutoFit="False"/>
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Legends>
+    <Legend _Template_="All" BackColor="Transparent"
+            Font="Trebuchet MS, 8.25pt, style=Bold" IsTextAutoFit="False" />
+  </Legends>
+  <BorderSkin SkinStyle="Emboss" />
+</Chart>-->

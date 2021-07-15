@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/modernizr") 
+
+ 
+    
+    <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+        <style>
+            body{
+                font-family: "Segoe UI",Arial,sans-serif;
+                padding-top: 10%;
+            }
+            #return-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: rgb(0, 0, 0);
+                background: rgba(0, 0, 0, 0.7);
+                width: 50px;
+                height: 50px;
+                display: block;
+                text-decoration: none;
+                -webkit-border-radius: 35px;
+                -moz-border-radius: 35px;
+                border-radius: 35px;
+                display: none;
+                -webkit-transition: all 0.3s linear;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+            #return-to-top i {
+                color: #fff;
+                margin: 0;
+                position: relative;
+                left: 16px;
+                top: 13px;
+                font-size: 19px;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+            #return-to-top:hover {
+                background: rgba(0, 0, 0, 0.9);
+            }
+            #return-to-top:hover i {
+                color: #fff;
+                top: 5px;
+            }
+            .res-img {
+                text-align:center;
+            }
+            #qu-info {
+                color: #1a1a1a;
+                margin-bottom: 3%;
+            }
+            .round-box {
+                margin: 2px;
+                text-align:center;  
+            }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- hidden menu -->
+                    @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"> @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" })</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>*@
+                
+
+                <a class='navbar-brand' href='/'>
+                   <img src="https://www.nemetschek.bg/wp-content/uploads/2013/11/logo_transparent_w200.png", height="20"/>
+                </a>          
+            </div>
+          
+        </div>
+    </div>
+        @*<div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>  @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" })  </li>
+            </ul>
+        </div>
+    </div>*@
+    <div class="container body-content">
+        @RenderBody()
+
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+        <footer style="margin-top:5px">
+            <div class="container">
+                <span style="display:inline-block">&copy; Nemetschek - Scrum Team 2018 Application</span>
+            </div>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+
+<script>
+    if (window.location.href.includes("AnswerCharacteristics") || window.location.href.includes("admin")
+        || window.location.href.includes("Question"))
+    {
+        $("footer").css("position", "relative");
+    }
+
+    // ===== Scroll to Top ====
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 20) {        // If page is scrolled more than 20px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 500);
+    });
+</script>
+ 
+<style>
+    body{
+        height:100%
+    }
+    footer {
+    position:absolute;
+   bottom:0;
+}
+</style>

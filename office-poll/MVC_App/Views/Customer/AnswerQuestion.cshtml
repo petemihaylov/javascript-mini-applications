@@ -1,0 +1,111 @@
+﻿@model MVC_App.Models.Administrator.ParentModel
+
+@{
+    ViewBag.Title = "AnswerQuestion";
+}
+
+<style>
+    #disable {
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<div class="body-content" >
+    <div>
+        @if (Model.AnswersCollection.Count != 0)
+        {
+            <div class="container">
+                <h3>Answer a question, takes a minute <i class="far fa-smile-beam"></i></h3>
+            </div>
+
+        }
+    </div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <h1>@Html.DisplayFor(model => model.Question.Question)</h1>
+            </div>
+        </div>
+
+        @{ Html.BeginForm("AnswerQuestion", "Customer", FormMethod.Post, new { @id = "myForm" }); }
+
+        @foreach (var answer in Model.AnswersCollection)
+            {
+            <div class="answ" style="padding-top: 1%">
+                <label>
+                    @Html.RadioButtonFor(x => x.AnswersCollection, answer.id, new { @class = "radio1", style = "transform: scale(3); margin-right: 20px;margin-left:12px" })
+                    <font size="6" style="vertical-align:sub"> @answer.Text </font>
+                </label>
+            </div>
+        }
+
+        @*@if (Model.AnswersCollection.Count != 0)
+                    {
+                <div>
+                    @Html.RadioButtonFor(x => x.AnswersCollection, "otherOption", new { id = "other_option", @class = "radio1", onclick = "click()" })
+                    <font size="4"> Other </font>
+                </div>
+
+                    <br />
+
+
+                    <div>
+                        @Html.TextBox("text", null, new { @placeholder = "Type Your Answer...", @id = "textbox", @class = "form-control", style = "display:none;" })
+                    </div>
+            }*@
+        <br />
+        <!-- id="disable"  does not work properly -->
+        <input class="btn btn-primary btnAnsw" type="submit" value="Please make your choice to proceed to presonal info" disabled />
+
+        @*
+             <button>
+                <div>
+                    @Html.ActionLink("Answer Personal Info", "AnswerCharacteristics", new { id = "disable" })
+                </div>
+            </button>
+        *@
+
+
+        @{ Html.EndForm(); }
+
+    </div>
+
+</div>
+<style>
+    .btnAnsw{
+        
+        font-size: 21px;
+         white-space: normal;
+        height:100px;
+        word-wrap: break-word;
+    }
+    
+</style>
+
+<script>
+    
+    
+    var answer_givenBy_user = $('input[type=radio]:checked').val();
+    if (typeof answer_givenBy_user != "undefined") {
+        $(".btn").removeAttr("disabled")
+        $(".btn").val("Proceed to personal info")
+    }
+    $('#myForm').change(function (event) {
+        $(".btn").removeAttr("disabled")
+        $(".btn").val("Proceed to personal info")
+        $('#disable').removeAttr('disable')
+    })
+    //$('#myForm').change(function (event) {
+
+    //    if (event.target.value == "otherOption") {
+    //        document.getElementById("textbox").style.display = "block"
+    //    } else {
+    //        document.getElementById("textbox").style.display = "none"
+    //    }
+    //})
+
+</script>
+

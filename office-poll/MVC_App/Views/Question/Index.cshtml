@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MVC_App.Administrator.QuestionModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ListOfQuestions</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "",new { @class = "btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td class="date">
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            
+            @Html.ActionLink("Edit", "Edit", new {  id=item.id}, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.id }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+<script> 
+    date = moment().format('D.M.YYYY').toString()
+    a = $(".date")
+    a.each(function () {
+        if($(this).html().replace(/\s/g, "").split("г")[0] == date) {
+            $($(this).closest("tr")).css("background-color", "#a3ffa5")
+        }
+    })
+</script>
