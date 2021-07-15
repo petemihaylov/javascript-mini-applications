@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Calendar4e.Models.Student>
+
+@{
+    ViewBag.Title = "Users";
+}
+<!-- nav-->
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Index">Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Complaints">Complaints</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/Admin/Users">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/HouseRules">House Rules</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <h2 class="custom-page-header edit">Users</h2>
+
+    <p>
+        <a href="/Admin/Index">Go Back</a>
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnrollmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThemeColor)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThemeColor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>
+                @if (item.Username != "admin")
+                {
+                    <td>
+
+                        @Html.ActionLink("Edit", "EditUser", new { id = item.StudentID })  |
+                        @Html.ActionLink("Delete", "DeleteUser", new { id = item.StudentID })
+                    </td>
+                }
+            </tr>
+
+        }
+
+    </table>
+</div>
+

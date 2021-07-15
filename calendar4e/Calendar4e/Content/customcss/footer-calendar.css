@@ -1,0 +1,23 @@
+﻿.container-fluid #calendar{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: grey;
+    text-decoration: none;
+}
+
+.field-validation-error {
+    color: #ff0000;
+}
+.navbar .container-fluid{
+    margin-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav button {
+    width: 300px;
+    margin-right: 20px;
+}
+.modal-footer{
+    margin-top: 0px;
+}

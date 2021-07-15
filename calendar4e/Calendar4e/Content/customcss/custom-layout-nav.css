@@ -1,0 +1,53 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    border-bottom: 1px dashed rgb(158, 157, 157);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+}
+.nav-tabs{
+    margin-bottom: 3%;
+}
+.logo {
+    color: rgb(158, 157, 157);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+
+}
+.logo h4{
+    margin-top:8px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(158, 157, 157);
+    margin: 5px;
+    transition: all 0.3s ease;
+}

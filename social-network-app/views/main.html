@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <!-- icons of font-awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/main-page.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/main-left-nav.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/main-right-nav.css">
+
+    <title>Main</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+        <ul>
+            <li><i class="fab fa-grav"></i></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="li-right">
+                <div class="button"><i class="fa fa-search"></i></a>
+                </div>
+            </li>
+            <li class="li-right">
+                <input type="text" placeholder="Search ..">
+            </li>
+        </ul>
+    </nav>
+</header>
+    <script>
+        // When the user scrolls down 50px from the top of the document, slide down the navbar
+      window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+    </script>
+    
+    <main>
+        <nav class="left-menu">
+            <div class="user-info">
+                <p class="p-user"><i class="fas fa-user-circle"></i> Account Settings</p>
+            </div>
+            <p class="left-info">Shortcuts</p>
+            <ul class="ul-left">
+                <li class="li-left"><a class="a-left" href="#"><i class="far fa-newspaper"></i> News Feed</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-bookmark"></i> Saved</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="far fa-calendar-alt"></i> Events</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-users"></i> Groups</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-compass"></i> Location</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-camera-retro"></i> Photos</a></li>
+                <li class="li-left"><a class="a-left" href="./game.html"><i class="fas fa-gamepad"></i> Games</a></li>
+            </ul>
+            <p class="left-info">Explore</p>
+            <ul class="ul-left">
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-bookmark"></i> On this day</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="far fa-calendar-alt"></i> Events</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-users"></i> Groups</a></li>
+                <li class="li-left"><a class="a-left" href="#"><i class="fas fa-compass"></i> Location</a></li>
+            </ul>
+        </nav>
+        <div class="right-menu">
+        <nav class="right-menu-nav">
+            <div class="user-info">
+                <p class="p-user"><i class="fas fa-user-circle"></i> Account Settings</p>
+            </div>
+            <ul class="ul-left">
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/maria.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Maria Stoyanova</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/toshko.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Todor Dimitrov</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/emo.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Emil Docev</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/Sa6o.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Alexander</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/me.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Peter Mihaylov</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/maria.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Maria Stoyanova</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/toshko.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Todor Dimitrov</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/emo.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Emil Docev</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/Sa6o.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Alexander</div></div>
+                </a></li>
+                <li class="li-left"><a class="a-left" href="#">
+                    <div class="div-right-wrap">
+                        <div class="img-right"><img class="img avatar-right" src="../public/img/me.jpg" alt="Avatar"></div>
+                        <div class="name-right-user">Peter Mihaylov</div></div>
+                </a></li>
+                <form>
+                    <textarea placeholder="Write something" ></textarea>
+                </form>
+            </ul>
+        </nav>
+        </div>
+        <div class="center-container">
+
+            <article class="main-first">
+                <h3>What's on your mind?</h3>
+                <div class="arrow-up"></div>
+                    <form>
+                    <textarea id="main" placeholder=" Some text over here"></textarea>
+                </form>
+                <div class="first-bottom-line">
+                    <button class="first-main"> <i class="far fa-image"></i> Photo/Video</button> <button class="first-main"><i class="far fa-smile"></i> Feelings/Activity</button>
+                    <button class="first-main"><i class="fas fa-archive"></i>Archive</button>
+                    <button class="button-main">Post</button>
+                </div>
+            </article>
+
+            <div class ="article-container">
+                <button class="collapsible">
+                    <div class="user-content">
+                    <div class="art-user"><img class="img avatar" src="../public/img/me.jpg" alt="Avatar"><span id="username">Peter Mihaylov</span><span><i class="fas fa-angle-down"></i></span></div>
+                    </div>
+                        <div class ="pre-content">
+                        I’m here overseas kicking off <b>#WorldChildrensDay!</b>
+                        A day for children, by children.
+                            We’re raising our voices to help save children’s lives, fight for their rights and help them reach their full potential. Click on the link to learn more about <b>@UNICEF</b>
+                    </div>
+                </button>
+                <div class="article-content">
+                    <div class="img-container">
+                        <iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/L7IP4UlXvG8">
+                        </iframe>
+                    </div>
+                    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                </div>
+                <div class="like-container"><hr>
+                    <button class="like-article-button"><i class="fas fa-comment-alt"></i>Comment</button> <button class="like-article-button"><i class="far fa-thumbs-up"></i>Like</button> <button class="like-article-button"><i class="fas fa-share"></i>Share</button>
+                </div>
+            </div>
+            <div class ="article-container">
+                <button class="collapsible">
+                    <div class="user-content">
+                        <div class="art-user"><img class="img avatar" src="../public/img/me.jpg" alt="Avatar"><span id="username">Peter Mihaylov</span><span><i class="fas fa-angle-down"></i></span></div>
+                    </div>
+                    <div class ="pre-content">
+                        I’m here overseas kicking off <b>#WorldChildrensDay!</b>
+                        A day for children, by children.
+                        We’re raising our voices to help save children’s lives, fight for their rights and help them reach their full potential. Click on the link to learn more about <b>@UNICEF</b>
+                    </div>
+                </button>
+                <div class="article-content">
+                    <div class="img-container">
+                        <iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/L7IP4UlXvG8">
+                        </iframe>
+                    </div>
+                    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                </div>
+                <div class="like-container"><hr>
+                    <button class="like-article-button"><i class="fas fa-comment-alt"></i>Comment</button> <button class="like-article-button"><i class="far fa-thumbs-up"></i>Like</button> <button class="like-article-button"><i class="fas fa-share"></i>Share</button>
+                </div>
+            </div>
+            <div class ="article-container">
+                <button class="collapsible">
+                    <div class="user-content">
+                        <div class="art-user"><img class="img avatar" src="../public/img/me.jpg" alt="Avatar"><span id="username">Peter Mihaylov</span><span><i class="fas fa-angle-down"></i></span></div>
+                    </div>
+                    <div class ="pre-content">
+                        I’m here overseas kicking off <b>#WorldChildrensDay!</b>
+                        A day for children, by children.
+                        We’re raising our voices to help save children’s lives, fight for their rights and help them reach their full potential. Click on the link to learn more about <b>@UNICEF</b>
+                    </div>
+                </button>
+                <div class="article-content">
+                    <div class="img-container">
+                        <iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/L7IP4UlXvG8">
+                        </iframe>
+                    </div>
+                    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                </div>
+                <div class="like-container"><hr>
+                    <button class="like-article-button"><i class="fas fa-comment-alt"></i>Comment</button> <button class="like-article-button"><i class="far fa-thumbs-up"></i>Like</button> <button class="like-article-button"><i class="fas fa-share"></i>Share</button>
+                </div>
+            </div>
+            <div class ="article-container">
+                <button class="collapsible">
+                    <div class="user-content">
+                        <div class="art-user"><img class="img avatar" src="../public/img/me.jpg" alt="Avatar"><span id="username">Peter Mihaylov</span><span><i class="fas fa-angle-down"></i></span></div>
+                    </div>
+                    <div class ="pre-content">
+                        I’m here overseas kicking off <b>#WorldChildrensDay!</b>
+                        A day for children, by children.
+                        We’re raising our voices to help save children’s lives, fight for their rights and help them reach their full potential. Click on the link to learn more about <b>@UNICEF</b>
+                    </div>
+                </button>
+                <div class="article-content">
+                    <div class="img-container">
+                        <iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/L7IP4UlXvG8">
+                        </iframe>
+                    </div>
+                    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                </div>
+                <div class="like-container"><hr>
+                    <button class="like-article-button"><i class="fas fa-comment-alt"></i>Comment</button> <button class="like-article-button"><i class="far fa-thumbs-up"></i>Like</button> <button class="like-article-button"><i class="fas fa-share"></i>Share</button>
+                </div>
+            </div>
+            <div class ="article-container">
+                <button class="collapsible">
+                    <div class="user-content">
+                        <div class="art-user"><img class="img avatar" src="../public/img/me.jpg" alt="Avatar"><span id="username">Peter Mihaylov</span><span><i class="fas fa-angle-down"></i></span></div>
+                    </div>
+                    <div class ="pre-content">
+                        I’m here overseas kicking off <b>#WorldChildrensDay!</b>
+                        A day for children, by children.
+                        We’re raising our voices to help save children’s lives, fight for their rights and help them reach their full potential. Click on the link to learn more about <b>@UNICEF</b>
+                    </div>
+                </button>
+                <div class="article-content">
+                    <div class="img-container">
+                        <iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/L7IP4UlXvG8">
+                        </iframe>
+                    </div>
+                    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                </div>
+                <div class="like-container"><hr>
+                    <button class="like-article-button"><i class="fas fa-comment-alt"></i>Comment</button> <button class="like-article-button"><i class="far fa-thumbs-up"></i>Like</button> <button class="like-article-button"><i class="fas fa-share"></i>Share</button>
+                </div>
+            </div>
+            <div class ="article-container">
+                <button class="collapsible">
+                    <div class="user-content">
+                        <div class="art-user"><img class="img avatar" src="../public/img/me.jpg" alt="Avatar"><span id="username">Peter Mihaylov</span><span><i class="fas fa-angle-down"></i></span></div>
+                    </div>
+                    <div class ="pre-content">
+                        I’m here overseas kicking off <b>#WorldChildrensDay!</b>
+                        A day for children, by children.
+                        We’re raising our voices to help save children’s lives, fight for their rights and help them reach their full potential. Click on the link to learn more about <b>@UNICEF</b>
+                    </div>
+                </button>
+                <div class="article-content">
+                    <div class="img-container">
+                        <iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/L7IP4UlXvG8">
+                        </iframe>
+                    </div>
+                    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                </div>
+                <div class="like-container"><hr>
+                    <button class="like-article-button"><i class="fas fa-comment-alt"></i>Comment</button> <button class="like-article-button"><i class="far fa-thumbs-up"></i>Like</button> <button class="like-article-button"><i class="fas fa-share"></i>Share</button>
+                </div>
+            </div>
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                for (var i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        var content = this.nextElementSibling;
+
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.
+            Copyright  <i class="fa fa-copyright" aria-hidden="true"></i> 2018.
+            All Rights Reserved.
+        </p>
+    </footer>
+</body>
+</html>

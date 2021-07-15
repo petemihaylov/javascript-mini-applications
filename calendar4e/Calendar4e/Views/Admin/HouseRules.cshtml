@@ -1,0 +1,103 @@
+﻿@model Calendar4e.Models.HouseViewModel
+@{
+    ViewBag.Title = "HouseRules";
+}
+
+<!-- sub nav-->
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Index">Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Complaints">Complaints</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Users">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/Admin/HouseRules">House Rules</a>
+        </li>
+    </ul>
+</div>
+<div class="container-fluid h-100">
+
+    <p>
+        <a href="/Admin/Index">Go Back</a>
+    </p>
+    <div class="row">
+        <!-- Create a house rule-->
+        <div class="col-md-6 d-flex">
+
+            <div class="container">
+                <h4 class="custom-page-header edit">Create</h4>
+                <br />
+                @using (Html.BeginForm("CreateRule", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <label class="control-label col-md-2 text-uppercase">Description</label>
+                            <div class="col-md-10">
+                                @Html.TextAreaFor(model => model.houseRule.Description, new { @class = "form-control", @rows = 5 })
+                                @Html.ValidationMessageFor(model => model.houseRule.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-6">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+        <!-- List house rules here -->
+        <div class="col-md-6">
+
+            <div class="container-fluid">
+                <h4 class="custom-page-header edit">List</h4>
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.houseRule.ID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.houseRule.Description)
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model.listRules)
+                    {
+
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "DeleteRule", new { id = item.ID })
+                            </td>
+
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

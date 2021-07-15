@@ -1,0 +1,35 @@
+﻿@model Calendar4e.Models.HouseViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="container">
+        <h2 class="custom-page-header edit">List of House Rules</h2>
+        <p>
+            <a href="/Task/Index">Go Back</a>
+        </p>
+
+        <table class="table">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.houseRule.ID)</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.houseRule.Description)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.listRules)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+
+        
+
+                </tr>
+            }
+        </table>
+
+    </div>

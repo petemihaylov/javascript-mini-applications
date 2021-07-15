@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Calendar4e.Models.Complaint>
+
+@{
+    ViewBag.Title = "Complaints";
+}
+<!-- sub nav-->
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Index">Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/Admin/Complaints">Complaints</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Users">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/HouseRules">House Rules</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <h2 class="custom-page-header edit">List of Complaints</h2>
+
+    <p>
+        <a href="/Admin/Index">Go Back</a>
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.Username)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DirectedToUser)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DirectedToUser)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteComplaint", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

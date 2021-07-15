@@ -1,0 +1,16 @@
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+
+export const SET_MESSAGE = "SET_MESSAGE";
+export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
+
+
+export const ADD_IMAGE = "ADD_IMAGE";
+export const DELETE_IMAGE = "DELETE_IMAGE";
+export const FETCH_IMAGES = "FETCH_IMAGES";
+
+
+export const ADD_PARTICIPANT = "ADD_PARTICIPANT";
+export const DELETE_PARTICIPANT = "DELETE_PARTICIPANT";
+export const FETCH_PARTICIPANTS = "FETCH_PARTICIPANTS";

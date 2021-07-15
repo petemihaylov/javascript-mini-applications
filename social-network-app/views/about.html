@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons of font-awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="../public/stylesheets/about-page.css">
+    <title>About</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><i class="fab fa-grav"></i></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="li-right">
+                <div class="button"><a class="active" href="login.html">Log In <i class="fas fa-sign-in-alt"></i></a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+
+    <!-- particles.js container -->
+    <div id="particles-js">
+        <!-- scripts -->
+        <script src="../public/js/particles.js"></script>
+        <script src="../public/js/app.js"></script>
+    </div>
+    <div class=" div-container" id="bg-sec">
+        <svg class="intro" viewbox="0 0 200 86">
+            <text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Where</text>
+            <text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Ideas</text>
+            <text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Begin.</text>
+            <text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2" clip-path="url(#text1)">Where</text>
+            <text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2" clip-path="url(#text2)">Ideas</text>
+            <text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2" clip-path="url(#text3)">Begin.</text>
+            <defs>
+                <clipPath id="text1">
+                    <text text-anchor="start" x="10" y="30" class="text">Where</text>
+                </clipPath>
+                <clipPath id="text2">
+                    <text text-anchor="start" x="10" y="50" class="text">Ideas</text>
+                </clipPath>
+                <clipPath id="text3">
+                    <text text-anchor="start" x="10" y="70" class="text">Begin.</text>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script  src="../public/js/about-index-anim.js"></script><br>
+        <div class="arrow"><a class="active" href="#bg-sec"> <i class="fas fa-angle-down"></i></a></div>
+
+        <script>
+            $(document).ready(function(){
+                $("#bg-sec").click(function(){
+                    $(".middle-wrapper").fadeIn(6000);
+                });
+            });
+        </script>
+        <div class="middle-wrapper">
+        <div class="middle-label"><p><b><span id="small-text">See every side</span><br> of the story.</b></p> </div>
+        <div class="text-img-middle">
+            <div class="middle-container">
+                <img id="middle-img" src="../public/img/alone.jpg" width="300" height="300">
+                <p> Gaffiti is Democracy <b><span id="marked">#freedom</span></b></p>
+                <div id="date"> 148 likes<span id="right-date">8 June 2018</span></div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+    <div class="bottom-container">
+        <div class="bottom-title"> Mindset </div>
+           <div class="bottom-page-content">
+               <p>what’s happening in the world</p>
+               <p>and what people are talking </p>
+               <p>about right now.</p>
+           </div>
+    </div>
+<div class="img-label">
+    <b><h3>SHOW THE WORLD</h3>
+        <h2>YOUR TRUE LOVE.</h2></b>
+    <div class="shit_div"></div>
+</div>
+<div class="images-container">
+	<div class="ibot">
+  		<img id="myImg1" class="imgs-bot" src="../public/img/wo.jpg" width="450" height="450">
+	</div> 
+	<div class="ibot">
+  		<img id="myImg2" class="imgs-bot" src="../public/img/download.jpg" width="450" height="450">
+	</div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop >  1550 || document.documentElement.scrollTop > 1550) {
+	document.getElementById("myImg1").className = "slideUp";
+	document.getElementById("myImg2").className = "slideUp";
+    }
+}
+</script>
+    <div class="f">
+    </div>
+</main>
+ <footer>
+        <p>
+            While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.
+            Copyright  <i class="fa fa-copyright" aria-hidden="true"></i> 2018.
+            All Rights Reserved.
+        </p>
+ </footer>
+</body>
+</html>

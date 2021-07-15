@@ -1,0 +1,52 @@
+﻿@model Calendar4e.Models.Student
+<div>
+    <div class="row">
+        <div class="col">
+
+        </div>
+
+        <div class="col col-4">
+
+            <div class="container-fluid">
+                <h4 class="custom-page-header">Login</h4>
+            </div>
+            <br />
+
+            @using (Html.BeginForm("Login", "Home",
+            new { ReturnUrl = ViewBag.ReturnUrl },
+            FormMethod.Post, new { @class = "index-form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+
+                    <label for="Password">Password</label>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    <small id="error">@ViewBag.Error</small>
+                    <div class="container-fluid">
+                        <small id="help" class="form-text text-muted">You can login with: username and password as credentials!</small>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-block">Login</button>
+                <br />
+                <div>
+                    @Html.ActionLink("Don't you have an account? Register", "Register")
+                </div>
+            }
+
+        </div>
+
+        <div class="col">
+
+        </div>
+    </div>
+
+</div>
+

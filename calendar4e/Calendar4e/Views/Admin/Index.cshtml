@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+<!-- nav-->
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Complaints">Complaints</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/Users">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Admin/HouseRules">House Rules</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <h1 class="custom-page-header edit text-center">Admin</h1>
+</div>
+
+<div class="container" style="margin-top: 10%">
+    <div id="chartContainer"></div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: ""
+                },
+                animationEnabled: true,
+                legend: {
+                    verticalAlign: "center",
+                    horizontalAlign: "left",
+                    fontSize: 18,
+                    fontFamily: "Helvetica"
+                },
+                theme: "light2",
+                data: [
+                    {
+                        type: "pie",
+                        indexLabelFontFamily: "Garamond",
+                        indexLabelFontSize: 18,
+                        indexLabel: "{label} {y}%",
+                        startAngle: -20,
+                        showInLegend: true,
+                        toolTipContent: "{legendText} {y}%",
+                        dataPoints: [
+                        { y: 3, legendText: "User", label: "User" },
+                        { y: 2, legendText: "Alonso", label: "Alonso" },
+                        { y: 5, legendText: "John", label: "John" }
+                        ]                   
+                        
+                    }
+                ]
+            });
+            chart.render();
+        };
+    </script>
+</div>

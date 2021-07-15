@@ -1,0 +1,167 @@
+
+body {
+    margin: 0 0 100px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    overflow:hidden;
+    background: #e6ecf0;
+    background: linear-gradient(to right, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+main{
+    text-align: center;
+    color: white;
+    margin-top: 15%;
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+
+}
+main p{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+h1{
+    font-size: 150px;
+    letter-spacing: 6px;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+/* Standard syntax */
+@keyframes example {
+    from { background: linear-gradient(to right, rgba(75, 125, 184, 0.68) 0%, rgba(85, 84, 219, 0.63) 51%, rgba(165, 131, 232, 0.64) 75%);}
+    to {background: linear-gradient(to right, rgba(184, 171, 86, 0.62) 0%, rgba(219, 109, 107, 0.36) 51%, rgba(232, 70, 64, 0.64) 75%);}
+}
+
+.fas.fa-sign-in-alt{
+    font-size: 10px;
+    padding-left: 3px;
+}
+.fab.fa-grav{
+    font-size: 30px;
+    padding-top: 16px;
+    padding-right: 6px;
+    padding-left: 60px;
+    color: #304498;
+}
+.fa.fa-sign-in{
+    color: black;
+}
+
+.active{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+}
+
+
+ul:not(.ul-left) {
+    margin: 0;
+    vertical-align: text-top;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 1px 2px #525252;
+    text-align: center;
+    background-color: white;
+    opacity: 0.98;
+}
+
+ul:hover {
+    opacity: 1;
+}
+
+li.li-right{
+    float: right;
+    padding-right: 8%;
+}
+
+.fas.fa-angle-down {
+    float: right;
+    padding-right: 20px;
+    font-size: 25px;
+    color: #535353;
+}
+
+.fas.fa-sign-in-alt {
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+.fab.fa-grav {
+    font-size: 30px;
+    padding-top: 9px;
+    padding-right: 30px;
+    padding-left: 60px;
+    color: #304498;
+}
+
+.active {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 6px;
+}
+
+.button {
+    background: #2ea1f9;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 3px;
+    border: none;
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 11px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.button:hover {
+    background: #374bb8;
+    color: white;
+}
+
+li{
+    float: left;
+}
+
+a:not(.active):not(.a-left) {
+    display: inline-block;
+    color: #616161;
+    padding: 15px 16px 20px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover:not(.active):not(.a-left) {
+    border-radius: 1px;
+    border-bottom: 4px solid #3741b1;
+    color: #3741b1;
+}
+
+.fa.fa-copyright{
+    font-size: 10px;
+}
+
+footer {
+    position: absolute;
+    overflow: hidden;
+    word-spacing: 2px;
+    font-size: 12px;
+    left: 0;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+    color: rgba(224, 224, 224, 0.63);
+    text-align: center;
+    background: linear-gradient(to right, #0faa9f 0%, #1fc8db 51%, #2dabdf 75%);
+    opacity: 0.35;
+}
+footer:hover{
+    opacity: 1;
+}

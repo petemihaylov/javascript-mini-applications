@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Calendar4e.Models.Complaint>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container-fluid">
+    <h2 class="custom-page-header edit">Complaints</h2>
+
+    <p>
+        <a href="/Task/Index">Go Back</a>
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DirectedToUser)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.IsPublic)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DirectedToUser)
+                    </td>
+                    @if (Session["Username"].ToString() == (item.Student.Username))
+                    {
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    }
+                </tr>
+    
+            }
+        }
+
+    </table>
+</div>

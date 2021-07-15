@@ -1,0 +1,113 @@
+@media screen
+and (min-device-width: 1240px)
+and (max-device-width: 2300px) {
+
+    .left-menu {
+        background-color: rgba(211, 211, 211, 0.72);
+        height: 500px;
+        margin-top: 5%;
+        float: left;
+        width: 18%;
+        box-shadow: 0 0 2px 1px #ffffff;
+        padding: 1em;
+    }
+
+    .p-user {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        padding-left: 30px;
+    }
+
+    .user-info {
+        color: #535353;
+        background-color: rgba(255, 255, 255, 0.47);
+        height: 50px;
+        padding: 1%;
+    }
+
+    .user-info:hover {
+        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.74);
+    }
+
+    .ul-left {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .li-left {
+        padding-top: 4px;
+        text-align: left;
+    }
+
+    .fas.fa-user-circle {
+        padding-right: 9px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .far.fa-newspaper {
+        color: white;
+        background-color: #164e79;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .far.fa-calendar-alt {
+        color: white;
+        background-color: #d9bb44;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .fas.fa-bookmark {
+        color: #79191b;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .fas.fa-compass {
+        color: white;
+        background-color: #5751db;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .fas.fa-gamepad {
+        color: #090202;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .fas.fa-users {
+        color: #090202;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .fas.fa-camera-retro {
+        background: linear-gradient(to right, #e4c340 0%, #fe6e31 51%, #ff061a 75%);
+        color: white;
+        padding: 3px;
+        border-radius: 6px;
+    }
+
+    .left-info {
+        font-size: 12px;
+    }
+
+    .a-left {
+        text-decoration: none;
+        display: block;
+        color: rgba(10, 10, 10, 0.7);
+        background-color: rgba(239, 239, 239, 0.4);
+        font-size: 14px;
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 3px 3px 3px 30px;
+    }
+
+    .a-left:hover {
+        background-color: white;
+    }
+}

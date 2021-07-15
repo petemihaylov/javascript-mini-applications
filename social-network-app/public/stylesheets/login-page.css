@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI",Arial,sans-serif;
+    overflow:hidden;
+    background: #e6ecf0;
+    background: linear-gradient(to right, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.fab.fa-grav{
+    font-size: 30px;
+    padding-top: 16px;
+    padding-right: 6px;
+    padding-left: 60px;
+    color: #304498;
+}
+.active{
+    color: #304498;
+}
+
+ul {
+    margin: 0;
+    vertical-align: text-top;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 1px 2px #525252;
+    text-align: center;
+    background-color: white;
+    opacity: 0.98;
+}
+
+ul:hover {
+    opacity: 1;
+}
+li{
+    float: left;
+}
+
+a {
+    display: inline-block;
+    color: #616161;
+    padding: 20px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover:not(.active){
+    border-radius: 1px;
+    border-bottom: 4px solid #304498;
+    color: #304498;
+}
+.fa.fa-copyright{
+    font-size: 10px;
+}
+footer {
+    word-spacing: 2px;
+    font-size: 12px;
+    position: fixed;
+    left: 0;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+    color: rgba(224, 224, 224, 0.63);
+    text-align: center;
+    background: linear-gradient(to right, #0faa9f 0%, #1fc8db 51%, #2dabdf 75%);
+}
+.fas.fa-angle-double-right {
+    font-size: 10px;
+}
+.page-canvas{
+    background-color: white;
+    width: 60%;
+    color: #525252;
+    margin: 5% 20% 5% 20%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+}
+
+.singup-helper{
+    margin: 0;
+}
+
+.signup-wrapper{
+    height: 150px;
+    font-size: 15px;
+    background-color:  rgba(0, 0, 0, 0.1);
+    padding-left: 5%;
+    font-family: "Segoe UI",Arial,sans-serif;
+    border-radius: 6px;
+}
+.login-wrapper{
+    text-align: center;
+    margin-bottom: 5%;
+    padding-top: 2%;
+}
+
+#login-header{
+    color: rgba(68, 68, 68, 0.9);
+    font-size: 19px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+    letter-spacing: normal;
+}
+.button {
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+    background-color: #2cb5e8;
+    border: none;
+    color: white;
+    border-radius: 80px 65px 80px 15px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 3px 22px;
+}
+.label.remember{
+    color: #616161;
+}
+.button:hover{
+    background-color: #304498;
+    color: white;
+}
+input[type=text]{
+    height: 25px;
+    width: 400px;
+    margin: 8px 0;
+    padding-left: 20px;
+}
