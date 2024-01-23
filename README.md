@@ -1,4 +1,4 @@
-# JS-Practice
+### A list of javascript mini applications.
 
 
 - [Twitter Bot](https://github.com/pepsm/JS-Practice/tree/master/simple-twitter-bot)
